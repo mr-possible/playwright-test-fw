@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "playwright-test-fw"
+version = "0.1.0"
+description = "Slowly learning Playwright for test automation and its industry use-cases"
+authors = ["Sambhav Dave <sambhavd4@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest-playwright = "^0.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
