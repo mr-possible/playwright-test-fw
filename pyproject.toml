@@ -10,15 +10,15 @@ python = "^3.11"
 pytest = "^8.3.2"
 pytest-html = "^4.1.1"
 playwright = "^1.45.1"
-autohooks = "^23.4.0"
-autohooks-plugin-black = "^23.4.0"
 
+[tool.poetry.group.dev.dependencies]
+autohooks = "^24.2.0"
+autohooks-plugin-black = "^23.10.0"
+
+[tool.autohooks]
+mode = "poetry_multiline"
+pre-commit = ["autohooks.plugins.black"]
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-
-[tool.autohooks]
-mode = "poetry"
-pre-commit = ["autohooks.plugins.black"]
