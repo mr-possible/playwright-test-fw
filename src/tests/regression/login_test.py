@@ -29,3 +29,12 @@ def test_unsuccessful_login(page, login_page_url):
     lp.login(username, password)
 
     assert lp.is_incorrect_credential_flash_displayed() is True
+
+
+def test_check_nav_bar(page, login_page_url):
+    page.goto(login_page_url)
+    lp = LoginPage(page)
+
+    expected_list = ["Demos", "Tools", "Tips", "About", "Contact"]
+
+    assert lp.are_nav_elements_displayed(expected_list) is True
